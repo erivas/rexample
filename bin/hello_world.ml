@@ -1,10 +1,7 @@
 open Mylib.Lib
-
-exception OtherBad
-
-let[@raises OtherBad] troce () = raise OtherBad
+open Myotherlib.Lib
 
 let () =
   let _ = trace () in
-  let _ = troce () in
+  let _ = other_trace () in
   print_endline "adieu!"
